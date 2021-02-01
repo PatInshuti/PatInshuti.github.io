@@ -43,6 +43,6 @@ In order to make a realistic conversation, I encorporated random breaks, and end
 
 ### Results:
 
-The final result of my artwork certainly differes with what a person could write because, even though each part of the conversation makes sense independently, the whole conversation with multiple personalities does not guarantee to be cohesive. 
+The final result of my artwork certainly differs with what a person could write because, even though each part of the conversation makes sense independently, the whole conversation with multiple personalities does not guarantee to be cohesive. 
 
 This is why I believe the thoughts it can provoke from a person reading it, is a sense of frustration and confusion dude not only the fact that there two oppositing arguments at hand i.e sadness and happniess but also due to the fact that the personalities discussing seem not to be on the same page with one another.
