@@ -8,6 +8,8 @@ How to generate alternative fiction endings with gpt-2
 Compiled 5 books of songs of ice and fire, worth 90,000 lines of script. Trained the GPT-2 algorithm on the game of thrones material.
 Credit to https://www.kaggle.com/muhammedfathi/game-of-thrones-book-files For providing the individual book materials.
 
+But unfortunately ended up training on one season dude to the amount of time all the seasons were taking to train them. And also the time to geneate test as immensely more
+
 
 ### How the Algorithm works
 
@@ -18,18 +20,17 @@ The GPT-2 model is able to create alternative storylines that make sense in a sm
 
 Maybe the most interesting part of this project is that with the same input text, we are not guaranteed of the exact same output of the alternative storyline. And in fact this is intentionally done in order to keep up the curiosity and engagement with the model.
 
-I do this by 
-
-I trained two models to compete and see what they say
-
+I do this by randomly choosing the temperature setting while generating "original text"
 
 ### The API
 
 The website communicates with a running server in colab, to generate and return storylines from the input 
 
-### Limitiation
+### Limitiation & Improvements
 
-compromise between a good model and and interactive one. For my purpose I had to go with lightly trained model in order to favor user interaction over the API
+I made a compromise between a good model and and interactive one. For my purpose I had to go with lightly trained model
+
+One of the improvements is to generate original text from the user input through the flask API
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
