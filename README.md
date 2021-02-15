@@ -1,4 +1,4 @@
-# Project 2 - Sad and Happy - Let's talk
+# Project 2 - Alternative storyLine Generator - GoT edition
 
 ### Abstract
 How to generate alternative fiction endings with gpt-2
