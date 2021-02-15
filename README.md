@@ -1,4 +1,4 @@
-# Sad and Happy - Let's talk
+# Project 1 - Sad and Happy - Let's talk
 
 ### Abstract
 This artwork enages a conversation between poets through using their poems as conversations. 
