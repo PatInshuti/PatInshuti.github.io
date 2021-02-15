@@ -1,3 +1,35 @@
+# Project 2 - Sad and Happy - Let's talk
+
+### Abstract
+How to generate alternative fiction endings with gpt-2
+
+### Data preparation
+
+Compiled 5 books of songs of ice and fire, worth 90,000 lines of script. Trained the GPT-2 algorithm on the game of thrones material.
+Credit to https://www.kaggle.com/muhammedfathi/game-of-thrones-book-files For providing the individual book materials.
+
+
+### How the Algorithm works
+
+The GPT-2 model is able to create alternative storylines that make sense in a smaller context, but not necessarily in the larger context. Furthermore, after several testings I realized that the model created associations of certain characters with others. As an example occasionally Hodor comes up when Bran is mentioned, this really fascinated me
+
+
+### Additions & Optimizations
+
+Maybe the most interesting part of this project is that with the same input text, we are not guaranteed of the exact same output of the alternative storyline. And in fact this is intentionally done in order to keep up the curiosity and engagement with the model.
+
+I do this by 
+
+I trained two models to compete and see what they say
+
+
+### The API
+
+The website communicates with a running server in colab, to generate and return storylines from the input 
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Project 1 - Sad and Happy - Let's talk
 
 ### Abstract
