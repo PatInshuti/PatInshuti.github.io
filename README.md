@@ -27,6 +27,9 @@ I trained two models to compete and see what they say
 
 The website communicates with a running server in colab, to generate and return storylines from the input 
 
+### Limitiation
+
+compromise between a good model and and interactive one. For my purpose I had to go with lightly trained model in order to favor user interaction over the API
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
