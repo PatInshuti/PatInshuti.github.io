@@ -1,4 +1,10 @@
+html{
+    height: 100%;
+}
 
+body{
+    height: 100%;
+}
 .disclaimer-card{
     position: absolute;
     padding: 1.5rem;
@@ -74,4 +80,76 @@
 .conversation-title{
     margin-top:3rem;
     display: none;
+}
+
+textarea {
+    resize: none;
+    outline: none;
+    background: #f1f3f4!important;
+    /* sborder: 1px solid transparent!important; */
+    border-radius: 4px!important;
+}
+
+.general-button.submit-to-api{
+    background-color: #ffc478;
+    width: auto;
+    color: #19456b;
+}
+
+.submit-form{
+    display: flex;
+    /* height: 100%; */
+    flex-direction: column;
+    justify-content: center;
+}
+
+blockquote {
+    margin: 0;
+}
+
+blockquote{
+    padding: 15px;
+    border-radius: 5px;
+    color:#ebedf1;
+    font-weight: 700;
+    font-size: large;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+.choices-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.choices{
+    width: 15rem;
+    color: black;
+    padding:15px;
+    border:1px solid black;
+    border-radius: 4px;
+    margin:5px;
+    outline: none;
+    background: #f1f3f4!important;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 100;
+}
+
+#writing_canvas{
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color:#ebedf1;
+}
+
+#typed-here{
+    margin-top: 3rem;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    color:#ebedf1;
+    max-width:40rem;
+    font-size: 25px;
 }

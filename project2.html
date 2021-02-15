@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Alternative storyLine Generator - GoT edition</title>
+        <link rel="stylesheet"  href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+    </head>
+
+    <body>
+
+        <div class="content">
+
+            <audio loop id="divAudio">
+                <source src="soundtrack.mp3" type="audio/mp3">
+             </audio>
+
+             <figure>
+                <blockquote cite="https://www.huxley.net/bnw/four.html">
+                    <p id="sentence-quote">Every day that he remains a prisoner, the less our name commands respect.</p>
+                    <figcaption>-<span id="name-quote">Tywin Lannister</span><cite id="house-quote"> House Lannister of Casterly Rock</cite></figcaption>
+                </blockquote>
+            </figure>
+
+             <h3 style="color:#ffc478">Ask George R. R. Martin to write the Sequel But first Give him a hint to start</h3>
+
+             <div class="choices-container">
+                 <div id="choice-1" class="choices">
+                    Tyrion smiled at him, remembering a certain dagger with a dragonbone hilt and a Valyrian steel blade. We must have a talk about that, and soon. He wondered if Lord Petyr would find that subject amusing as well.
+                 </div>
+
+                 <div id="choice-2" class="choices">
+                    Dany touched it. The cloth was so smooth that it seemed to run through her fingers like water. She could not remember ever wearing anything so soft. It frightened her. She pulled her hand away. “Is it really mine?”
+                 </div>
+
+                 <div id="choice-3" class="choices">
+                    I should have killed the eunuch as well. A little more blood on his hands, what would it matter? He could not say what had stayed his dagger. Not gratitude. Varys had saved him from a headsman’s sword,
+                 </div>
+             </div>
+
+
+             <div>
+
+                 <div id="typed-strings">
+
+                    <div id="writing_canvas">
+                    
+                    </div>
+                    
+                    </div>
+                    </div>
+                    <span id="typed-here"></span>
+             </div>
+
+             <button id="mute-track">Mute</button>
+            
+
+        </div>
+
+    </body>
+
+    <script>
+        
+
+        document.addEventListener('DOMContentLoaded', async (event)=>{
+        
+
+            var vAudio = document.getElementById("divAudio");
+
+            var choice1 = document.getElementById("choice-1");
+            var choice2 = document.getElementById("choice-2");
+            var choice3 = document.getElementById("choice-3");
+            var writing_canvas = document.getElementById("typed-here");
+
+
+            var muteButton = document.getElementById("mute-track");
+
+            sentence_quote = document.getElementById("sentence-quote");
+            name_quote = document.getElementById("name-quote");
+            house_quote = document.getElementById("house-quote");
+
+            const playMusic = ()=>{
+                vAudio.play();
+            }
+
+            const muteMusic = () =>{
+                vAudio.muted = true;
+            }
+
+            choice1.addEventListener("click",()=>{
+
+                var text = choice1.innerHTML
+                submit_form("choice1").then(data =>{
+                    console.log(data.response)
+
+                    writing_canvas.innerHTML = ""
+                    var options = {
+                    strings: [data.response],
+                    typeSpeed: 10
+                    };
+
+                    var typed = new Typed('#typed-here', options);                });
+                playMusic();
+            })
+
+            choice2.addEventListener("click",()=>{
+
+                var text = choice1.innerHTML
+                submit_form("choice2").then(data =>{
+                    console.log(data.response)
+
+                    writing_canvas.innerHTML = ""
+
+                    var options = {
+                    strings: [data.response],
+                    typeSpeed: 10
+                    };
+
+                    var typed = new Typed('#typed-here', options);
+
+                    // writing_canvas.innerHTML = data.response
+                });
+                playMusic();
+            })
+
+            choice3.addEventListener("click",()=>{
+                var text = choice1.innerHTML
+                submit_form("choice3").then(data =>{
+                    console.log(data.response)
+                    writing_canvas.innerHTML = ""
+                    var options = {
+                    strings: [data.response],
+                    typeSpeed: 10
+                    };
+
+                    var typed = new Typed('#typed-here', options);
+                });
+                playMusic();
+            })
+
+
+            muteButton.addEventListener("click", ()=>{
+                muteMusic();
+            })
+
+            const submit_form = async(choice) =>{
+
+                var apiUrl = "http://ab51ea5433e0.ngrok.io"
+
+                const response = await fetch(`${apiUrl}/make-george-write/${choice}`, {
+                    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                });
+
+                return response.json(); 
+            }
+
+
+            var counter = 0
+            var images =
+            [
+                "url('images/1.jpg') no-repeat center center fixed",
+                "url('images/2.jpg') no-repeat center center fixed",
+                "url('images/3.jpg') no-repeat center center fixed",
+                "url('images/4.jpg') no-repeat center center fixed"
+            ]
+
+            document.body.style.background = "url('images/1.jpg') no-repeat center center fixed";
+
+            setInterval(() => {
+                const quotes = fetch(`https://game-of-thrones-quotes.herokuapp.com/v1/random`, {
+                    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+                });
+
+                quotes.then(data => data.json()).then(data =>{
+                    sentence_quote.innerHTML=data.sentence;
+                    name_quote.innerHTML=data.character.name;
+                    house_quote.innerHTML=" "+data.character.house.name;
+                })
+
+                counter = (counter + 1) % 3
+                document.body.style.background = images[counter];
+                
+                
+            },10000)
+
+        })
+     </script>
+
+</html>
