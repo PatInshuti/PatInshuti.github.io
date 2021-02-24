@@ -1,6 +1,6 @@
 # Project 3 - Life simulation - Rick & Morty Inspired
 
-A game with choices -- choices determine general path of life, but there is randomness. -- check the game about hiring....
+A game with choices -- choices determine general path of life, but there is randomness. -- check the game about hiring.... https://www.survivalofthebestfit.com/
 
 According to the person background such as boy,girl,identify
 
