@@ -7,6 +7,15 @@ According to the person background such as boy,girl,identify
   -- choices at each stage of life eg: apply to job, go to high school, go to the nba (keep a score of your happiness & social stasifaction ) the goal is to maximize both.
   
   -- The point of the game is to prove that average is underrated.
+  
+  
+  
+ 
+ #### Sections
+ 
+ #### ELIZA
+ 
+ As you take life decisions Eliza helps you naviagte your feelings and maybe makesyou reconsider some of your life choices 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
